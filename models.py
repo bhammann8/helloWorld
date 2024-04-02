@@ -14,7 +14,7 @@ class Student(db.Model):
     is_honors = db.Column(db.Boolean, nullable=False)
     email = db.Column(db.String(100), nullable=False)
 
-    def __init__(self, first_name, last_name, major_id, birth_date, is_honors):
+    def __init__(self, first_name, last_name, major_id, birth_date, is_honors, email):
         self.first_name = first_name
         self.last_name = last_name
         self.major_id = major_id
@@ -22,6 +22,7 @@ class Student(db.Model):
         self.num_credits_completed = 0
         self.gpa = 0.0
         self.is_honors = is_honors
+        self.email = email
 
     def __repr__(self):
         return f"{self.first_name} {self.last_name}"
